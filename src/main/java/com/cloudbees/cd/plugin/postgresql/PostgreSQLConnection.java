@@ -22,14 +22,13 @@ public class PostgreSQLConnection {
     private String login;
     private String password;
     private String url_start = "jdbc:postgresql://";
-    private final String separator = "\n|;";
 
     private List<String> getQueries(String cd_parameter) {
         if (cd_parameter == null) {
             return Collections.emptyList();
         } else {
             List<String> result = new ArrayList<>(1);
-            Pattern reg = Pattern.compile(separator);
+            Pattern reg = Pattern.compile(".*;$");
             Matcher m = reg.matcher(cd_parameter);
             while(m.find()) {
                 result.add(m.group());
