@@ -4,9 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Hello world!
@@ -25,7 +28,13 @@ public class PostgreSQLConnection {
         if (cd_parameter == null) {
             return Collections.emptyList();
         } else {
-            return Arrays.asList(cd_parameter.split(separator));
+            List<String> result = new ArrayList<>(1);
+            Pattern reg = Pattern.compile(separator);
+            Matcher m = reg.matcher(cd_parameter);
+            while(m.find()) {
+                result.add(m.group());
+            }
+            return result;
         }
     }
 
