@@ -28,7 +28,7 @@ public class PostgreSQLConnection {
             return Collections.emptyList();
         } else {
             List<String> result = new ArrayList<>(1);
-            Pattern reg = Pattern.compile(".*;$");
+            Pattern reg = Pattern.compile("^.*;$", Pattern.MULTILINE);
             Matcher m = reg.matcher(cd_parameter);
             while(m.find()) {
                 result.add(m.group());
