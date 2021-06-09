@@ -4,7 +4,7 @@
   <groupId>com.cloudbees.cd.plugin.postgresql</groupId>
   <artifactId>postgresql-noclient-library</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>PostgreSQL library to use in CloudBees CD EC-PostgreSQL-noclient plugin</name>
   <url>http://www.cloudbees.com</url>
 
