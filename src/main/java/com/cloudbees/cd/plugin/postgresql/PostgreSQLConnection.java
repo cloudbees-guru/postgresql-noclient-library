@@ -19,7 +19,7 @@ public class PostgreSQLConnection {
     private String login;
     private String password;
     private String url_start = "jdbc:postgresql://";
-    private final String separator = "\n;";
+    private final String separator = "\n|;";
 
     private List<String> getQueries(String cd_parameter) {
         if (cd_parameter == null) {
