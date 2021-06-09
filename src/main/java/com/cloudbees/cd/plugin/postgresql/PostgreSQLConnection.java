@@ -31,10 +31,12 @@ public class PostgreSQLConnection {
 
     public void executeQuery(String query) throws Exception {
         List<String> queries = this.getQueries(query);
-        System.out.println("Found " + queries + " query(ies) to execute:");
+
+        System.out.println("Found " + queries.size() + " query(ies) to execute:");
         for (String q : queries) {
             System.out.println(q);
         }
+
         Connection con = this.connect();
         Statement st = con.createStatement();
         con.setAutoCommit(false);
