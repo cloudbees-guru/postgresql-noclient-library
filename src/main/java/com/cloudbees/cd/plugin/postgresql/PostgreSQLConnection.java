@@ -6,7 +6,7 @@ import java.sql.*;
  * Hello world!
  *
  */
-public class PosgreSQLConnection {
+public class PostgreSQLConnection {
     private String server;
     private String port;
     private String databaseName;
@@ -30,7 +30,7 @@ public class PosgreSQLConnection {
             return DriverManager.getConnection(url_full, login, password);
         } catch (SQLException ex) {
             ex.printStackTrace();
-            throw new Exception("Cound not connect to database: " + ex.getMessage(), ex);
+            throw new Exception("Could not connect to database: " + ex.getMessage(), ex);
         }
     }
 
@@ -39,12 +39,12 @@ public class PosgreSQLConnection {
             con.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
-            throw new Exception("Cound not close connection to database: " + ex.getMessage(), ex);
+            throw new Exception("Could not close connection to database: " + ex.getMessage(), ex);
         }
     }
 
 
-    public PosgreSQLConnection() {
+    public PostgreSQLConnection() {
     }
 
     public String getLogin() {

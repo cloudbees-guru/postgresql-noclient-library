@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class PosgreSQLConnectionTest
+public class PostgreSQLConnectionTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class PosgreSQLConnectionTest
      *
      * @param testName name of the test case
      */
-    public PosgreSQLConnectionTest(String testName )
+    public PostgreSQLConnectionTest(String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class PosgreSQLConnectionTest
      */
     public static Test suite()
     {
-        return new TestSuite( PosgreSQLConnectionTest.class );
+        return new TestSuite( PostgreSQLConnectionTest.class );
     }
 
     /**
