@@ -38,7 +38,7 @@ spec:
   stages {
     stage('Run maven') {
       steps {
-          git(url:'https://github.com/cloudbees-guru/postgresql-noclient-library', credentialsId: 'github-cloudbees-guru')
+          checkout scm
           container('maven') {
             withMaven(
                       mavenSettingsConfig: '4123d3ce-22c2-477d-83d7-623049473250') {
